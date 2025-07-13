@@ -5,7 +5,7 @@ import 'package:jsontool/jsontool.dart';
 
 /// [Transformer] that allows changes to the request/response data before it
 /// is sent/received to/from the server.
-class BigIntJsonTransformer extends DefaultTransformer {
+class BigIntJsonTransformer extends SyncTransformer {
   BigIntJsonTransformer._({
     required JsonDecodeCallback jsonDecodeCallback,
   }) : super(jsonDecodeCallback: jsonDecodeCallback);
@@ -31,8 +31,7 @@ class BigIntJsonTransformer extends DefaultTransformer {
   }
 
   /// Parses the string and returns the resulting Json object.
-  static dynamic decode(
-    String source, {
+  static dynamic decode(String source, {
     List<String>? keys,
   }) {
     Object? value;
@@ -46,8 +45,7 @@ class BigIntJsonTransformer extends DefaultTransformer {
   }
 
   /// Converts [object] to a JSON string.
-  static dynamic encode(
-    Object? value, {
+  static dynamic encode(Object? value, {
     StringSink? sink,
     String? indent,
   }) {
