@@ -31,7 +31,8 @@ class BigIntJsonTransformer extends SyncTransformer {
   }
 
   /// Parses the string and returns the resulting Json object.
-  static dynamic decode(String source, {
+  static dynamic decode(
+    String source, {
     List<String>? keys,
   }) {
     Object? value;
@@ -45,7 +46,8 @@ class BigIntJsonTransformer extends SyncTransformer {
   }
 
   /// Converts [object] to a JSON string.
-  static dynamic encode(Object? value, {
+  static dynamic encode(
+    Object? value, {
     StringSink? sink,
     String? indent,
   }) {

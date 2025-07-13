@@ -16,7 +16,6 @@ void main() async {
   final txn = await algorand.indexer().getTransactionById(
       'YLJH7NBKH4W6DLKO6LJTIWGC5Q52SQZ3VSMG2YKEFLBJCSUGEIIQ');
 
-
   final source = jsonEncode(txn.toJson());
   final txn2 = BigIntJsonTransformer.decode(source);
   print(txn2);
